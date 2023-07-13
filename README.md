@@ -1,5 +1,5 @@
 # Deep Learning Anti-Cheat For CSGO
-
+# Use Python Version 3.9.11
 
 
 Input the directory with your .dem files and the model outputs predictions for every shot during the game.
@@ -7,9 +7,17 @@ Input the directory with your .dem files and the model outputs predictions for e
 ```python
 from DLAC import Model
 
-model = Model("./path_to_demos/")
-model.predict_to_terminal(threshold=0.95)   # You can manually specify threshold, 0.95 by default
+model = Model("C:\\path\\to\\demo\\directory\\")
+model.predict_to_terminal(threshold=0.90)
 ```
+
+```python
+from DLAC import Model
+
+model = Model("C:\\path\\to\\demo\\directory\\")
+model.predict_to_csv(threshold=0.90, out_file'example.csv')
+```
+
 ## Installation
 Windows should be as easy as:
 ```python
